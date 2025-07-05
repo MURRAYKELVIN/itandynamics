@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Itan Dynamics</title>
+    <title>Contact Us - Itan Dynamics</title>
 
     <!-- Bootstrap CSS CDN -->
     <link
@@ -27,13 +27,13 @@
       :root {
         --primary-bg: #f6931e;
         --secondary-bg: #f4f6f9;
-        --hero-bg: #e8ecf1;
+        --hero-bg: #e8ecf1; /* Kept for potential future use */
         --footer-bg: #f2a847;
         --accent: #f6931e;
         --text-color: #222;
         --light-text: #fff;
         --muted-text: #6c757d;
-        --card-bg: #ffffff;
+        --card-bg: #ffffff; /* Kept for potential future use */
         --copyright-bg: #0c4326;
       }
 
@@ -41,6 +41,15 @@
         font-family: "Sen", sans-serif;
         background-color: var(--secondary-bg);
         color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .main-content {
+        flex: 1;
+        padding-top: 30px;
+        padding-bottom: 60px;
       }
 
       /* Navbar */
@@ -63,73 +72,50 @@
         color: var(--light-text);
       }
 
-      /* Hero Section */
-      .banner_section {
-        background: linear-gradient(
-            rgba(10, 31, 68, 0.7),
-            rgba(10, 31, 68, 0.7)
-          ),
-          url('images/murup.jpg') center/cover no-repeat;
-        padding: 80px 0;
-        text-align: center;
-        color: var(--light-text);
+      /* Contact Form Styles */
+      .contact_section { /* Retained as it's used as a class on main-content div */
+        /* background-color: var(--secondary-bg); */ /* Already on body */
+        /* padding: 60px 0; */ /* Handled by .main-content */
       }
-
-      .banner_taital {
-        font-size: 48px;
-        font-weight: 800;
-        color: var(--light-text);
-      }
-
-      .banner_text {
-        font-size: 18px;
-        color: #d1d1d1;
-      }
-
-      .started_text a {
-        background-color: var(--accent);
-        padding: 12px 25px;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-      }
-
-      .started_text a:hover {
-        background-color: #e07e12;
-      }
-
-      /* Newsletter */
-      .newsletter_section {
-        background-color: var(--card-bg);
-        padding: 60px 0;
-        text-align: center;
-      }
-
-      .newsletter_taital {
+      .contact_taital {
         font-size: 32px;
         font-weight: 700;
         margin-bottom: 20px;
       }
-
-      .email_bt {
+      .mail_text,
+      .massage-bt {
         width: 100%;
         padding: 12px;
+        margin-bottom: 15px;
         border: 1px solid #ccc;
         border-radius: 5px;
       }
 
-      .subscribe_bt a {
+      .btn_main a {
         display: inline-block;
-        margin-top: 20px;
-        background-color: var(--accent);
+        margin-right: 15px;
+        padding: 10px 20px;
+        background-color: var(--primary-bg);
         color: white;
-        padding: 10px 25px;
         border-radius: 5px;
         text-decoration: none;
       }
 
-      .subscribe_bt a:hover {
+      .btn_main a:hover {
         background-color: #e07e12;
+      }
+
+      .map-responsive iframe {
+        border: 0;
+        width: 100%;
+        height: 368px;
+        border-radius: 8px;
+      }
+
+      .contact_img img {
+        width: 100%;
+        max-width: 400px;
+        margin-top: 30px;
       }
 
       /* Footer */
@@ -137,6 +123,7 @@
         background-color: var(--footer-bg);
         color: var(--light-text);
         padding: 60px 0;
+        margin-top: auto; /* Push footer to bottom */
       }
 
       .footer_text {
@@ -199,10 +186,10 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+              <li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
             <div class="login_bt ml-3">
               <ul class="list-inline mb-0">
@@ -219,31 +206,43 @@
       </div>
     </div>
 
-    <!-- Hero/Banner -->
-    <div class="banner_section">
+    <!-- Main Content -->
+    <div class="main-content contact_section"> <!-- Added contact_section class for styling -->
       <div class="container">
-        <h1 class="banner_taital">Itan Dynamics</h1>
-        <p class="banner_text">
-          Innovative software development company specializing in creating
-          cutting-edge solutions for diverse industries. Expertise in custom
-          software development, web development, and digital transformation.
-        </p>
-        <div class="started_text"><a href="#">Contact Us</a></div>
-      </div>
-    </div>
-
-    <!-- Newsletter -->
-    <div class="newsletter_section">
-      <div class="container">
-        <h1 class="newsletter_taital">Subscribe to Our Newsletter</h1>
-        <form action="#">
-          <textarea
-            class="email_bt"
-            placeholder="Enter Your Email"
-            rows="3"
-          ></textarea>
-          <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-        </form>
+        <h1 class="contact_taital text-center">Request A Call Back</h1>
+        <hr class="contact_border_main mb-5" /> <!-- This class was not defined, might be a typo or from external css if any -->
+        <div class="row">
+          <div class="col-md-6">
+            <form action="#">
+              <input type="text" class="mail_text" placeholder="Name" />
+              <input type="text" class="mail_text" placeholder="Phone Number" />
+              <input type="email" class="mail_text" placeholder="Email" />
+              <textarea
+                class="massage-bt"
+                placeholder="Message"
+                rows="5"
+              ></textarea>
+              <div class="btn_main">
+                <a href="#">Send Now</a>
+                <a href="#">Map</a>
+              </div>
+            </form>
+            <div class="map_main mt-4">
+              <div class="map-responsive">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3..."
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 text-center">
+            <div class="contact_img">
+              <img src="images/itan1.jpg" alt="Itan Logo" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -282,7 +281,6 @@
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
             </div>
-
         </div>
       </div>
     </div>
