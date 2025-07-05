@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Itan Dynamics</title>
+    <title>About Us - Itan Dynamics</title>
 
     <!-- Bootstrap CSS CDN -->
     <link
@@ -27,13 +27,13 @@
       :root {
         --primary-bg: #f6931e;
         --secondary-bg: #f4f6f9;
-        --hero-bg: #e8ecf1;
+        --hero-bg: #e8ecf1; /* Kept for potential future use, not actively harming */
         --footer-bg: #f2a847;
         --accent: #f6931e;
         --text-color: #222;
         --light-text: #fff;
         --muted-text: #6c757d;
-        --card-bg: #ffffff;
+        --card-bg: #ffffff; /* Kept for potential future use */
         --copyright-bg: #0c4326;
       }
 
@@ -41,6 +41,14 @@
         font-family: "Sen", sans-serif;
         background-color: var(--secondary-bg);
         color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 60px 0;
       }
 
       /* Navbar */
@@ -63,80 +71,12 @@
         color: var(--light-text);
       }
 
-      /* Hero Section */
-      .banner_section {
-        background: linear-gradient(
-            rgba(10, 31, 68, 0.7),
-            rgba(10, 31, 68, 0.7)
-          ),
-          url('images/murup.jpg') center/cover no-repeat;
-        padding: 80px 0;
-        text-align: center;
-        color: var(--light-text);
-      }
-
-      .banner_taital {
-        font-size: 48px;
-        font-weight: 800;
-        color: var(--light-text);
-      }
-
-      .banner_text {
-        font-size: 18px;
-        color: #d1d1d1;
-      }
-
-      .started_text a {
-        background-color: var(--accent);
-        padding: 12px 25px;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-      }
-
-      .started_text a:hover {
-        background-color: #e07e12;
-      }
-
-      /* Newsletter */
-      .newsletter_section {
-        background-color: var(--card-bg);
-        padding: 60px 0;
-        text-align: center;
-      }
-
-      .newsletter_taital {
-        font-size: 32px;
-        font-weight: 700;
-        margin-bottom: 20px;
-      }
-
-      .email_bt {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-
-      .subscribe_bt a {
-        display: inline-block;
-        margin-top: 20px;
-        background-color: var(--accent);
-        color: white;
-        padding: 10px 25px;
-        border-radius: 5px;
-        text-decoration: none;
-      }
-
-      .subscribe_bt a:hover {
-        background-color: #e07e12;
-      }
-
       /* Footer */
       .footer_section {
         background-color: var(--footer-bg);
         color: var(--light-text);
         padding: 60px 0;
+        margin-top: auto; /* Push footer to bottom */
       }
 
       .footer_text {
@@ -199,8 +139,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
               <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
               <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
             </ul>
@@ -219,31 +159,37 @@
       </div>
     </div>
 
-    <!-- Hero/Banner -->
-    <div class="banner_section">
+    <!-- Main Content -->
+    <div class="main-content">
       <div class="container">
-        <h1 class="banner_taital">Itan Dynamics</h1>
-        <p class="banner_text">
-          Innovative software development company specializing in creating
-          cutting-edge solutions for diverse industries. Expertise in custom
-          software development, web development, and digital transformation.
-        </p>
-        <div class="started_text"><a href="#">Contact Us</a></div>
-      </div>
-    </div>
-
-    <!-- Newsletter -->
-    <div class="newsletter_section">
-      <div class="container">
-        <h1 class="newsletter_taital">Subscribe to Our Newsletter</h1>
-        <form action="#">
-          <textarea
-            class="email_bt"
-            placeholder="Enter Your Email"
-            rows="3"
-          ></textarea>
-          <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-        </form>
+        <h1 class="text-center mb-4">About Itan Dynamics</h1>
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+            <p class="lead text-center">
+              Itan Dynamics is an innovative software development company dedicated to crafting cutting-edge solutions for a diverse range of industries. Our expertise lies in custom software development, dynamic web development, and comprehensive digital transformation strategies.
+            </p>
+            <hr class="my-4">
+            <h3>Our Mission</h3>
+            <p>
+              Our mission is to empower businesses by providing them with robust, scalable, and efficient software solutions that drive growth and innovation. We believe in the transformative power of technology and strive to deliver products that not only meet but exceed our clients' expectations.
+            </p>
+            <h3>Our Vision</h3>
+            <p>
+              We envision a future where technology seamlessly integrates with business operations, creating smarter, more efficient, and more successful enterprises. Itan Dynamics aims to be at the forefront of this technological evolution, leading the way with innovative solutions and unparalleled service.
+            </p>
+            <h3>Our Values</h3>
+            <ul>
+              <li><strong>Innovation:</strong> We constantly explore new technologies and methodologies to deliver state-of-the-art solutions.</li>
+              <li><strong>Quality:</strong> We are committed to the highest standards of quality in everything we do, from initial concept to final deployment.</li>
+              <li><strong>Collaboration:</strong> We work closely with our clients, fostering strong partnerships to achieve shared goals.</li>
+              <li><strong>Integrity:</strong> We conduct our business with honesty and transparency, building trust with our clients and stakeholders.</li>
+              <li><strong>Customer Focus:</strong> Our clients are at the heart of our business. We listen to their needs and tailor our solutions to meet their specific requirements.</li>
+            </ul>
+            <p class="mt-4">
+              At Itan Dynamics, we are passionate about technology and driven by results. Whether you are looking to develop a new software application, revamp your existing web presence, or embark on a complete digital transformation journey, we have the skills and experience to help you succeed.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -282,7 +228,6 @@
                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
               </ul>
             </div>
-
         </div>
       </div>
     </div>
